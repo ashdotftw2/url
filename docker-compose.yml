@@ -1,0 +1,21 @@
+version: '3.1'
+
+services:
+
+  yourls:
+    image: yourls
+    restart: always
+    ports:
+      - 8080:80
+    environment:
+      YOURLS_DB_PASS: AHSorathiya110
+      YOURLS_SITE: https://example.com
+      YOURLS_USER: ali
+      YOURLS_PASS: AHSorathiya110
+
+  mysql:
+    image: mysql
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: AHSorathiya110
+      MYSQL_DATABASE: yourls
